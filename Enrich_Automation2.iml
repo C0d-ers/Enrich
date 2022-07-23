@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AutoImportedSourceRoots">
+    <option name="directories">
+      <list>
+        <option value="src/TestRough/baseChrome" />
+        <option value="src/TestRough/chromeBase" />
+        <option value="src/test/EnrichTestScripts" />
+      </list>
+    </option>
+  </component>
+</module>
