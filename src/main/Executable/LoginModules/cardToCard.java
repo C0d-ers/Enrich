@@ -20,7 +20,7 @@ public class cardToCard extends Base_Page {
     finexusOTP finexus;
     @BeforeTest
     public void beforeSuite() throws IOException, InterruptedException {
-        setupDevice();
+        setupEmulator();
         chromeSetup();
         one = new Contacts(driver);
         homePage = new Home_Page(driver);
@@ -52,7 +52,7 @@ public class cardToCard extends Base_Page {
 
         //OTP from finexus
         Thread.sleep(6000);
-        String otp = finexus.findOTP("5010150051");
+        String otp = finexus.findOTP("5010150029");
         entOTP.typeOTP(otp,"");
         cardToCardTransfer.clickAddToFavourite();
         cardToCardTransfer.clickConfirm();

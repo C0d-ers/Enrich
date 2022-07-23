@@ -11,10 +11,8 @@ public class enterOTP extends AppBase {
             System.out.println("Sorry invalid OTP provided \t length : " + otp.length() + " -> " + otp);
             tearDown();
         }
-        else {
-            //pressInbuiltButton(otp, decide);
-            pressInbuiltButton("112342",decide);
-        }
+        else
+            pressInbuiltButton(otp, decide);
     }
     String resendCode = ":id/resendOTPTextView";
     public void resendOTP(){
