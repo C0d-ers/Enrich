@@ -27,6 +27,7 @@ public class cardToCard extends Base_Page {
         cardToCardTransfer = new Card_to_Card_Transfer(driver);
         entOTP = new enterOTP(driver);
         finexus = new finexusOTP(chromeDriver);
+        homePage.pressInbuiltButton("123456");
     }
 
     @Test (dataProviderClass = data.class, dataProvider = "My Contacts")

@@ -17,7 +17,7 @@ public class editContacts extends basePage {
 
         capabilities.setCapability("platformName","Android");
         capabilities.setCapability("automationName","UiAutomator2");
-        capabilities.setCapability("platformVersion","11.0");
+        capabilities.setCapability("platformVersion","12.0");
         capabilities.setCapability("deviceName","OPPO CPH2061");  //Xiaomi Redmi K20 Pro   OPPO CPH2061   Android Emulator
         capabilities.setCapability("noReset", "true");
         capabilities.setCapability("appPackage","com.google.android.contacts");
