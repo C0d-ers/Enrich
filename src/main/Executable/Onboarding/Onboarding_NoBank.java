@@ -20,6 +20,18 @@ public class Onboarding_NoBank extends basePage {
     ruEnrich no;
     EnterEmail dummyMail;
     EmailVerification verifyEmail;
+    
+    
+
+
+
+
+
+
+
+
+
+
     ApplyCard card;
     Milestone gotit;
     PersonalDetails personalDetails;
