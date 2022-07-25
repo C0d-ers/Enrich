@@ -36,9 +36,9 @@ public class cardToCard extends Base_Page {
         int decide = rand.nextInt(2);
         int Amount;
         if(decide == 1)
-            Amount = 1500 + rand.nextInt(200);
+            Amount = 500 + rand.nextInt(200);
         else
-            Amount = 800 + rand.nextInt(200);
+            Amount = 100 + rand.nextInt(200);
 
         System.out.print( phone + "  ->  " );
         homePage.clickSend();
