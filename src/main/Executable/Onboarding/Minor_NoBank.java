@@ -125,7 +125,7 @@ public class Minor_NoBank extends basePage {
         driver.getKeyboard().pressKey(firstName);
         driver.hideKeyboard();
         if(Country.equals("Nepal"))
-            personalDetails.enterDOB(2006);
+            personalDetails.enterDOB(2007);
         personalDetails.gender();
         scroll(driver,action, (float) 0.8, (float) 0.5);
         personalDetails.motherMaidenName(lastName);

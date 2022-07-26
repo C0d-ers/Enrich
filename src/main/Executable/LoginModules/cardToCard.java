@@ -38,7 +38,7 @@ public class cardToCard extends Base_Page {
         if(decide == 1)
             Amount = 500 + rand.nextInt(200);
         else
-            Amount = 100 + rand.nextInt(200);
+            Amount = 1000 + rand.nextInt(200);
 
         System.out.print( phone + "  ->  " );
         homePage.clickSend();
@@ -53,7 +53,7 @@ public class cardToCard extends Base_Page {
 
         //OTP from finexus
         Thread.sleep(6000);
-        String otp = finexus.findOTP("5010150029");
+        String otp = finexus.findOTP("5010150057");
         entOTP.typeOTP(otp,"");
         cardToCardTransfer.clickAddToFavourite();
         cardToCardTransfer.clickConfirm();
