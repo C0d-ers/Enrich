@@ -14,6 +14,7 @@ public class Home_Page extends Base_Login{
     String C2C = "//android.view.View[@content-desc= 'Card to Card']";
     String RequestMoney = "//android.view.View[@content-desc='Request Money']";
     String SplitBill = "//android.view.View[@content-desc='Split Bill']";
+    String BankTransfer = "//android.view.View[@content-desc='Bank Transfer']";
     public void clickEye(){
         clickButton(eye);
     }
@@ -60,5 +61,9 @@ public class Home_Page extends Base_Login{
     }
     public void clickSplitBill(){
         clickButton(SplitBill);
+    }
+
+    public void clickBankTransfer(){
+        clickButton(BankTransfer);
     }
 }

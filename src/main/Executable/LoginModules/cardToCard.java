@@ -53,7 +53,8 @@ public class cardToCard extends Base_Page {
 
         //OTP from finexus
         Thread.sleep(6000);
-        String otp = finexus.findOTP("5010150057");
+        //String otp = finexus.findOTP("5010150057");
+        String otp = finexus.findOTP("6010160333");
         entOTP.typeOTP(otp,"");
         cardToCardTransfer.clickAddToFavourite();
         cardToCardTransfer.clickConfirm();
