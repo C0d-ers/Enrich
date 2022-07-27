@@ -73,11 +73,11 @@ public class categorylistDate {
     @DataProvider(name = "Saving Box Details")
     public static Object[][] savingBoxDetails(){
         Object[][] data = new Object[5][4];
-        data [0][0] = "Travel";              data [0][1] = data [0][0] + " : 01";    data[0][2] = "06";     data[0][3] = "11";
-        data [1][0] = "Emergency";           data [1][1] = data [1][0] + " : 02";    data[1][2] = "12";     data[1][3] = "17";
-        data [2][0] = "Family";              data [2][1] = data [2][0] + " : 03";    data[2][2] = "18";     data[2][3] = "23";
-        data [3][0] = "Shopping";            data [3][1] = data [3][0] + " : 04";    data[3][2] = "24";     data[3][3] = "23";
-        data [4][0] = "Others";              data [4][1] = data [4][0] + " : 05";    data[4][2] = "24";     data[4][3] = "27";
+        data [0][0] = "Travel";              data [0][1] = "07";    data[0][2] = "28";     data[0][3] = "31";
+        data [1][0] = "Emergency";           data [1][1] = "08";    data[1][2] = "1";     data[1][3] = "6";
+        data [2][0] = "Family";              data [2][1] = "08";    data[2][2] = "6";     data[2][3] = "14";
+        data [3][0] = "Shopping";            data [3][1] = "08";    data[3][2] = "15";     data[3][3] = "19";
+        data [4][0] = "Others";              data [4][1] = "08";    data[4][2] = "22";     data[4][3] = "31";
 
         return data;
     }

@@ -27,14 +27,15 @@ public class savingBox extends Base_Page {
         overview.clickSavingBox();
     }
     @Test(priority = 1, dataProvider = "Saving Box Details",dataProviderClass = categorylistDate.class)
-    public void start(String type, String sName, String StartDate, String EndDate) throws InterruptedException {
+    public void start(String type, String month, String StartDate, String EndDate) throws InterruptedException {
         Faker faker = new Faker();
-        String saveName = sName + " : "; // + faker.;
-        String startDate =  "07/"+StartDate+"/2022";
-        String endDate = "07/"+EndDate+"/2022";
+        String saveName = type + " : " + faker.harryPotter().spell();
+        String startDate = month + "/"+StartDate+"/2022";
+        String endDate = month + "/"+EndDate+"/2022";
 
         homePage.clickSavings();
         savingbox.clicktype(type);
         savingbox.addSavingBox(type,saveName,startDate,endDate);
+        System.out.println(saveName + "\n" + startDate + " - " + endDate);
     }
 }
