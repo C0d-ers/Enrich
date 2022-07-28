@@ -16,7 +16,7 @@ public class savingBox extends Base_Page {
     SavingBox savingbox;
     @BeforeTest
     public void beforeTest() throws IOException, InterruptedException {
-        setupDevice();
+        setupEmulator();
         //chromeSetup();
         //log_In();
         homePage = new Home_Page(driver);

@@ -13,8 +13,8 @@ public class data {
     @DataProvider(name = "My Contacts")
     public static Object [] [] Contacts1(){
         Object[][] data = new Object[10][2];
-        data [0][0] = "Frodo Baggins";      data [0][1] = "605010150023";
-        data [1][0] = "Captain Colton";     data [1][1] = "605010150024";
+        data [0][0] = "Frodo Baggins";      data [0][1] = "605010150040";
+        data [1][0] = "Captain Colton";     data [1][1] = "605010150038";
         data [2][0] = "Obi-Wan Kenobi";     data [2][1] = "605010150025";
         data [3][0] = "Depa Billaba";       data [3][1] = "605010150027";
         data [4][0] = "Bail Organa";        data [4][1] = "605010150028";
