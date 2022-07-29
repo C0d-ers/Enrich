@@ -50,7 +50,7 @@ public class Onboarding_NoBank extends basePage {
         String firstName = fullName.substring(0,fullName.indexOf(" "));
         String lastName = fullName.substring(fullName.lastIndexOf(" ")+1);
 
-        String dummyEmail= (firstName.replaceAll("\\s", "")+postFix + properties.getProperty("email-postfix")).toLowerCase();
+        String dummyEmail= (lastName.replaceAll("\\s", "")+postFix + properties.getProperty("email-postfix")).toLowerCase();
 
         String address1 = faker.address().streetAddress();
         String address2 = faker.address().secondaryAddress();
