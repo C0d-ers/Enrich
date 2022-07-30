@@ -63,7 +63,7 @@ public class LocalBankTransfer extends  Base_Page{
         localBankTransfer.clickConfirm();
 
         Thread.sleep(6000);
-        String otp = finexus.findOTP("6010160333");
+        String otp = finexus.findOTP("5010150046");
         entOTP.typeOTP(otp,"");
         Thread.sleep(5000);
         localBankTransfer.clickDone();
