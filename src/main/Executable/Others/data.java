@@ -26,6 +26,16 @@ public class data {
 
         return data;
     }
+    @DataProvider(name = "Left Contacts")
+    public static Object [] [] leftContacts(){
+        Object[][] data = new Object[4][2];
+        data [2][0] = "Mike Wheeler";       data [2][1] = "605010150030";
+        data [3][0] = "Dustin Henderson";   data [3][1] = "605010150034";
+        data [1][0] = "Nancy Wheeler";      data [1][1] = "605010150036";
+        data [0][0] = "Will Byers";         data [0][1] = "605010150039";
+        return data;
+    }
+
 
     @DataProvider(name = "Contacts two")
     public static Object [] [] HariContacts(){
