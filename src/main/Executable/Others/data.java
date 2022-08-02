@@ -21,7 +21,7 @@ public class data {
         data [5][0] = "Joyce Byers";        data [5][1] = "605010150053";
         data [6][0] = "Mike Wheeler";       data [6][1] = "605010150030";
         data [7][0] = "Dustin Henderson";   data [7][1] = "605010150034";
-        data [8][0] = "Nancy Wheeler";      data [8][1] = "605010150036";
+        data [8][0] = "Nancy Wheeler";      data [8][1] = "605010150020";
         data [9][0] = "Will Byers";         data [9][1] = "605010150039";
 
         return data;
