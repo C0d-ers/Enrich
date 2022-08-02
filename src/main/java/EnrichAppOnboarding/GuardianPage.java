@@ -55,6 +55,7 @@ public class GuardianPage extends AppBase{
         sendText(idNumber, passport);
         sendText(CountryOfIssue,"Nepal");
         clickButton(country);
+
         date_Picker( issueDate,  year, Integer.parseInt(DOB(2019,2022,"")));
         clickButton(Ok);
         date_Picker( expiryDate,  year, Integer.parseInt(DOB(2023,2025,"")));
