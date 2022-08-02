@@ -44,8 +44,6 @@ public class Onboarding_AMBank extends basePage {
         String postFix = properties.getProperty("numPost");
         String phoneNumber = "5010150"+ postFix;
 
-        String LgnEmail = properties.getProperty("email");
-        String LgnPassword = properties.getProperty("password");
         String emailOTP;
 
         String fullName = properties.getProperty("BankAccountName");
@@ -100,10 +98,6 @@ public class Onboarding_AMBank extends basePage {
         Thread.sleep(9000);
         dummyMail.enterEmail(dummyEmail);
 
-//        mail.startMailosaurForOTP();
-//        mail.logIn(LgnEmail,LgnPassword);
-//        emailOTP = mail.findOTP(dummyEmail);
-
         mail.createEmail(dummyEmail);
         emailOTP = mail.findOTP();
 
@@ -113,9 +107,11 @@ public class Onboarding_AMBank extends basePage {
         verifyEmail.verify();
         //verifyEmail.clickContinue();
 
+        Thread.sleep(3000);
         card.apply();
         gotit.GotIt();
 
+        Thread.sleep(30000);
         //Capturing process here
         continousTouch(action);
 
