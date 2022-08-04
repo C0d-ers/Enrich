@@ -21,7 +21,7 @@ public class Signup_TopUp extends basePage{
    FPX fpx;
     @BeforeTest
     public void startServer() throws MalformedURLException {
-        setupEmulator();
+        setupDevice();
         chromeSetup();
         landingPage = new LandingPage(driver);
         signUp = new Login_SignUP(driver);

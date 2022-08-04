@@ -62,6 +62,7 @@ public class phraseAndPasscode extends basePage {
         System.out.println(Phrase);
         phrase.clickContinue();
         phrase.clickYes();
+        System.out.println(phrase);
         passCode.enterPasscode("123456");
         passCode.enterPasscode("123456");
     }
