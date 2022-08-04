@@ -44,7 +44,7 @@ public class phraseAndPasscode extends basePage {
         properties.load(input);
 
         String phoneNumber = "5010150" + properties.getProperty("numPost");
-        String Phrase = properties.getProperty("numPost") + dateForPhrase();
+        String Phrase = "50" + properties.getProperty("numPost") + dateForPhrase();
 
         landingPage.logIn();
         logIn.enterPhoneNumberLgn(phoneNumber);
