@@ -3,13 +3,6 @@ package Others;
 import org.testng.annotations.DataProvider;
 
 public class data {
-    @DataProvider(name = "Contacts One")
-    public static Object [] [] Contacts() {
-        Object[][] data = new Object[10][2];
-        data[0][0] = "Original 17";
-        data[0][1] = "605010150017";
-        return data;
-    }
     @DataProvider(name = "My Contacts")
     public static Object [] [] Contacts1(){
         Object[][] data = new Object[10][2];
