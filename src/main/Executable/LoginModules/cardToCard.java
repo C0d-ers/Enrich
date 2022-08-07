@@ -28,6 +28,8 @@ public class cardToCard extends Base_Page {
         entOTP = new enterOTP(driver);
         finexus = new finexusOTP(chromeDriver);
         homePage.pressInbuiltButton("123456");
+        homePage.clickSend();
+        homePage.cardToCard();
     }
 
     @Test (dataProviderClass = data.class, dataProvider = "My Contacts")
@@ -41,8 +43,7 @@ public class cardToCard extends Base_Page {
             Amount = 1000 + rand.nextInt(200);
 
         System.out.print( phone + "  ->  " );
-        homePage.clickSend();
-        homePage.cardToCard();
+
         cardToCardTransfer.randomAmount(String.valueOf(Amount));
         cardToCardTransfer.selectContact();
         //cardToCardTransfer.clickYes();
@@ -53,14 +54,13 @@ public class cardToCard extends Base_Page {
 
         //OTP from finexus
         Thread.sleep(6000);
-        String otp = finexus.findOTP("5010150046");
+        String otp = finexus.findOTP("5010150047");
         //String otp = finexus.findOTP("6010160335");
         entOTP.typeOTP(otp,"");
         cardToCardTransfer.clickAddToFavourite();
         cardToCardTransfer.clickConfirm();
         cardToCardTransfer.clickDone();
         Thread.sleep(5000);
-        driver.navigate().back();
     }
    // @AfterTest
     public void burnDown(){
