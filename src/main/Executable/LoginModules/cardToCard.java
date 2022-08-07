@@ -6,6 +6,7 @@ import EnrichAppOnboarding.enterOTP;
 import Others.Contacts;
 import Others.data;
 import chrome.finexusOTP;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -54,19 +55,20 @@ public class cardToCard extends Base_Page {
 
         //OTP from finexus
         Thread.sleep(6000);
-        String otp = finexus.findOTP("5010150047");
-        //String otp = finexus.findOTP("6010160335");
+        //String otp = finexus.findOTP("5010150057");
+        String otp = finexus.findOTP("6010160333");
         entOTP.typeOTP(otp,"");
-        cardToCardTransfer.clickAddToFavourite();
-        cardToCardTransfer.clickConfirm();
-        cardToCardTransfer.clickDone();
-        Thread.sleep(5000);
+//        cardToCardTransfer.clickAddToFavourite();
+//        cardToCardTransfer.clickConfirm();
+//        cardToCardTransfer.clickDone();
+        cardToCardTransfer.clickGotIt();
     }
-   // @AfterTest
-    public void burnDown(){
+   @AfterTest
+    public void burnDown() throws InterruptedException {
+        driver.navigate().back();
         sign_out();
+        Thread.sleep(3000);
         burnItToGround();
     }
 }
-
 //Important Number login in monday 5010150055   ->   Check video for Saving box
