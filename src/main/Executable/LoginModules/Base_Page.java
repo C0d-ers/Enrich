@@ -52,7 +52,6 @@ public class Base_Page extends basePage {
         }
         catch (Exception e){
         }
-
         if(bind.equals("Yes"))
         {
             OTP.typeOTP(smsOTP.findOTP(phoneNumber),"");

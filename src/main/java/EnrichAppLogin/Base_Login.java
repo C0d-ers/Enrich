@@ -85,7 +85,6 @@ public class Base_Login {
             String c = "/";
             String d = "(";
             Thread.sleep(2000);
-            MobileElement element;
             if(ch == c.charAt(0) || ch == d.charAt(0))
                 driver.findElement(new By.ByXPath(id)).isDisplayed();
             else
