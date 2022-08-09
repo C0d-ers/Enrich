@@ -44,7 +44,7 @@ public class activateCard extends Base_Page{
     }
     @When("User login to the App")
     public void userLoginToTheApp() throws IOException, InterruptedException {
-        log_In();
+        log_In("234");
     }
 
     @Then("User will navigate to CardSetting")

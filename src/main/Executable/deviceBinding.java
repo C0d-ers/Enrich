@@ -11,40 +11,21 @@ import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class deviceBinding extends basePage {
-    LandingPage landingPage;
-    Login_SignUP logIn;
-    enterOTP OTP;
-    smsForBOUser smsOTP;
-    Security_Phrase securityPhrase;
-    Pass_Code passCode;
-
     @Test
-    public void getDevieBinded() throws IOException, InterruptedException {
-        setupDevice();
-        chromeSetup();
-        landingPage = new LandingPage(driver);
-        logIn = new Login_SignUP(driver);
-        OTP = new enterOTP(driver);
-        securityPhrase = new Security_Phrase(driver);
-        passCode = new Pass_Code(driver);
-        smsOTP = new smsForBOUser(chromeDriver);
-
-        TouchAction<?> action = new TouchAction<>(driver);
-        FileInputStream input = new FileInputStream("src/main/Resource/Resource.properties");
-        Properties properties = new Properties();
-        properties.load(input);
-
-        String phoneNumber = "4010150285";
-
-        touch(action);
-        landingPage.logIn();
-        logIn.enterPhoneNumber(phoneNumber);
-        logIn.clickLogin();
-        logIn.DeviceBindingYes();
-
-        OTP.typeOTP(smsOTP.findOTP(phoneNumber),"");
+    public void getDevieBinded() {
+        String otp = "";
+        Pattern p = Pattern.compile("\\d+");
+        Matcher m = p.matcher("Confidential! Never share your OTP. You are about to switch new Mobile Device, Code 147376. Expires 09 08 20:45:58");
+        while (m.find()) {
+            String one = m.group();
+            System.out.println(one);
+            if(one.length() > 5)
+                break;
+        }
     }
 
 }

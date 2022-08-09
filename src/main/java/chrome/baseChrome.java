@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
 
 public class baseChrome {
     ChromeDriver chromeDriver;
-
     public static final long WAIT = 40;
     public baseChrome(ChromeDriver driver){
         this.chromeDriver =driver;
@@ -48,23 +47,40 @@ public class baseChrome {
         Matcher m = p.matcher(temp_otp);
         while (m.find()) {
             otp = m.group();
+            if(otp.length() > 5)
+                break;
         }
         return otp;
     }
     public String fetchOTP(String num,String countryCode){
-        WebElement element;
         String BO_number;
         String otp = "";
         for (int i = 1; i < 10; i++) {
             BO_number = getText(By.cssSelector("#mobile-"+i));
             if(("60"+num).equals(BO_number)) {
                 String temp_otp = getText(By.cssSelector("#otp-" + i));
-                otp = String_to_Number(temp_otp);
+                if (temp_otp.contains("You are about to switch new Mobile Device"))
+                {
+                    System.out.println(temp_otp);
+                    String mixedOTP = String_to_Number(temp_otp);
+                    System.out.println(mixedOTP);
+                    otp = mixedOTP.substring(0,6);
+                    System.out.println(otp);
+                }
+                else
+                    otp = String_to_Number(temp_otp);
                 return otp;
             }
             else if((countryCode+num).equals(BO_number)) {
                 String temp_otp = getText(By.cssSelector("#otp-" + i));
-                otp = String_to_Number(temp_otp);
+                if (temp_otp.contains("You are about to switch new Mobile Device"))
+                {
+                    String mixedOTP = String_to_Number(temp_otp);
+                    System.out.println(mixedOTP);
+                    otp = mixedOTP.substring(0,6);
+                }
+                else
+                    otp = String_to_Number(temp_otp);
                 return otp;
             }
             System.out.println("Number is : " + BO_number + " and i is : "+ i);
@@ -73,11 +89,9 @@ public class baseChrome {
     }
     public String getotp( String phoneNumber,String countryCode) {
         chromeDriver.navigate().refresh();
-        String otp = fetchOTP(phoneNumber,countryCode);
-        return otp;
+        return fetchOTP(phoneNumber,countryCode);
     }
     public String fetchOTPFinexus(String num,String phone,String otpExprsn){
-        WebElement element;
         String BO_number;
         String otp = "";
         for (int i = 1; i < 10; i++) {

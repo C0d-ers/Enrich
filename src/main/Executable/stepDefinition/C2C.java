@@ -40,7 +40,7 @@ public class C2C extends Base_Page {
     @When("User logsIn to the App")
     public void userLogsInToTheApp() throws IOException, InterruptedException {
         driver.startActivity(new Activity("com.malaysiaairlines.enrichprepaidcard.dev","com.malaysiaairlines.enrichprepaidcard.MainActivity"));
-        log_In();
+        log_In("234");
         homePage = new Home_Page(driver);
     }
     @And("Goes to CardToCard Trasaction Page")

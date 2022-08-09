@@ -24,7 +24,7 @@ public class MultiCurrency extends Base_Page {
     }
     @When("User logs In to the App")
     public void userLogsInToTheApp() throws IOException, InterruptedException {
-        log_In();
+        log_In("192");
         homePage = new Home_Page(driver);
         multiCurrency = new Multi_Currency(driver);
         mcwExchange = new MCW_Exchange(driver);

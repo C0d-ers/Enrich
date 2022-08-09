@@ -24,26 +24,41 @@ public class Base_Page extends basePage {
     Home_Page homePage;
     Setting setting;
     Profile profile;
-    public void log_In() throws IOException, InterruptedException {
+    Device_Binding deviceBinding;
+    public void log_In(String phoneNumber) throws IOException, InterruptedException {
         landingPage = new LandingPage(driver);
         logIn = new Login_SignUP(driver);
         OTP = new enterOTP(driver);
         securityPhrase = new Security_Phrase(driver);
         passCode = new Pass_Code(driver);
         smsOTP = new smsForBOUser(chromeDriver);
+        deviceBinding = new Device_Binding(driver);
 
         TouchAction<?> action = new TouchAction<>(driver);
         FileInputStream input = new FileInputStream("src/main/Resource/Resource.properties");
         Properties properties = new Properties();
         properties.load(input);
 
-        String phoneNumber = "4010150" + properties.getProperty("numPost");
-
         touch(action);
         landingPage.logIn();
         logIn.enterPhoneNumber(phoneNumber);
         logIn.clickLogin();
+        String bind = "";
+        try {
+            deviceBinding.deviceBindingPopUp();
+            deviceBinding.clickYes();
+            deviceBinding.clickContinue();
+            bind = "Yes";
+        }
+        catch (Exception e){
+        }
 
+        if(bind.equals("Yes"))
+        {
+            OTP.typeOTP(smsOTP.findOTP(phoneNumber),"");
+            deviceBinding.clickOk();
+            logIn.clickLogin();
+        }
         OTP.typeOTP(smsOTP.findOTP(phoneNumber),"");
         securityPhrase.clickYes();
         passCode.enterPasscode("123456");

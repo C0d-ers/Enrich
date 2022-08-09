@@ -25,7 +25,7 @@ public class data {
         data [2][0] = "Mike Wheeler";       data [2][1] = "605010150030";
         data [3][0] = "Dustin Henderson";   data [3][1] = "605010150034";
         data [1][0] = "Nancy Wheeler";      data [1][1] = "605010150036";
-        data [0][0] = "Will Byers";         data [0][1] = "605010150039";  //Loads of Saving Box
+        data [0][0] = "Will Byers";         data [0][1] = "605010150039";  //Loads of Saving Boxit
         data [4][0] = "Joyce Byers";        data [4][1] = "605010150053";
         data [5][0] = "Bail Organa";        data [5][1] = "605010150028";
         return data;

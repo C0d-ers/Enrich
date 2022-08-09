@@ -38,7 +38,7 @@ public class newCardActivation extends Base_Page{
         userManagement = new UserManagement(chromeDriver);
         logInBO = new logInBackOffice(chromeDriver);
         finexus = new finexusOTP(chromeDriver);
-        log_In();
+        log_In("98798");
     }
     @Test
     public void start() throws IOException, InterruptedException {
