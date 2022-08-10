@@ -19,7 +19,7 @@ public class cardToCard extends Base_Page {
     Card_to_Card_Transfer cardToCardTransfer;
     enterOTP entOTP;
     finexusOTP finexus;
-    String num = "6010160333";
+    String num = "5010150046";
     @BeforeTest
     public void beforeSuite() throws IOException, InterruptedException {
         setupEmulator();
@@ -29,8 +29,8 @@ public class cardToCard extends Base_Page {
         cardToCardTransfer = new Card_to_Card_Transfer(driver);
         entOTP = new enterOTP(driver);
         finexus = new finexusOTP(chromeDriver);
-        //log_In(num);
-        homePage.pressInbuiltButton("123456");
+        log_In(num);
+        //homePage.pressInbuiltButton("123456");
         homePage.clickSend();
         homePage.cardToCard();
     }
