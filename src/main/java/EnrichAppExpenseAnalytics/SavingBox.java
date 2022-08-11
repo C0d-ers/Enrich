@@ -7,11 +7,11 @@ public class SavingBox extends Base_Login {
     public SavingBox(AndroidDriver androidDriver) {
         super(androidDriver);
     }
-    String Travel = "//android.view.View[@bounds = '[78,476][516,914]']";
-    String Emergency = "//android.view.View[@bounds = '[564,476][1002,914]']";
-    String Family = "//android.view.View[@bounds = '[78,962][516,1400]']";
-    String Shopping = "//android.view.View[@bounds = '[564,962][1002,1400]']";
-    String Other = "//android.view.View[@bounds = '[78,1448][516,1886]']";
+    String Travel = "(//android.widget.Button[@index = '0'])[3]";
+    String Emergency = "//android.widget.Button[@index = '1']";
+    String Family = "//android.widget.Button[@index = '2']";
+    String Shopping = "//android.widget.Button[@index = '3']";
+    String Other = "//android.widget.Button[@index = '4']";
 
 //    String TravelSavingBox = "Add Travel Savings Box";
 //    String EmergencySavingBox = "Add Emergency Savings Box";
