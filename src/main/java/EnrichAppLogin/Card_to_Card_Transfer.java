@@ -42,11 +42,11 @@ public class Card_to_Card_Transfer extends Base_Login{
         clickButton("NO");
     }
     public void selectUser(String name){
-        if(findElement(name))
+        if(findelement(name))
             clickButton(name);
     }
     public void clickContinue(){
-        Boolean val = findElement("Continue");
+        Boolean val = findelement("Continue");
         if(val.equals(true))
             clickButton("Continue");
     }

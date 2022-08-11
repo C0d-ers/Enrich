@@ -27,7 +27,7 @@ public class SavingBox extends Base_Login {
     String endDate = "//android.view.View[@index= '8']";
     String dateField = "//android.widget.EditText[@index ='1']";
     public void scrollClick(String id) throws InterruptedException {
-        if(findElement(id))
+        if(findelement(id))
             clickButton(id);
         else{
             Thread.sleep(3000);

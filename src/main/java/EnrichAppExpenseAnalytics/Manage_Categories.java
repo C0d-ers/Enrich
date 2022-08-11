@@ -18,7 +18,7 @@ public class Manage_Categories extends Base_Login {
         for(int i =0;i<10;i++){
             if(i==0)
                 saveScreenShot("Current",mainCategory);
-            if(!findElement(edit)) {
+            if(!findelement(edit)) {
                 saveScreenShot("Updated-",mainCategory);
                 clickButton(backButton);
                 break;

@@ -79,7 +79,7 @@ public class Base_Login {
         Random random = new Random();
         return random.nextInt(range);
     }
-    public boolean findElement(String id){
+    public boolean findelement(String id){
         try{
             char ch = id.charAt(0);
             String c = "/";

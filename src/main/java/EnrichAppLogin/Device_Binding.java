@@ -7,7 +7,7 @@ public class Device_Binding extends Base_Login{
         super(androidDriver);
     }
     public void deviceBindingPopUp(){
-        findElement("You are about to switch your device.");
+        findelement("You are about to switch your device.");
     }
     public void clickYes(){
         clickButton("Yes");

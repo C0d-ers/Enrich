@@ -13,7 +13,7 @@ public class Secondary_Number extends Base_Login{
         clickButton("Andorra");
         int i;
         for(i=0;i<8;i++){
-            if(findElement(country)) {
+            if(findelement(country)) {
                 clickButton(country);
                 break;
             }
