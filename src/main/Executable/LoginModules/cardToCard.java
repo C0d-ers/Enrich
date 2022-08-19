@@ -19,7 +19,7 @@ public class cardToCard extends Base_Page {
     Card_to_Card_Transfer cardToCardTransfer;
     enterOTP entOTP;
     finexusOTP finexus;
-    String num = "5010150046";
+    String num = "6010160333";
     @BeforeTest
     public void beforeSuite() throws IOException, InterruptedException {
         setupEmulator();
@@ -35,7 +35,7 @@ public class cardToCard extends Base_Page {
         homePage.cardToCard();
     }
 
-    @Test (dataProviderClass = data.class, dataProvider = "Left Contacts")
+    @Test (dataProviderClass = data.class, dataProvider = "My Contacts")
     public void beforeTest(String name, String phone) throws InterruptedException {
         Random rand = new Random();
         int decide = rand.nextInt(2);
