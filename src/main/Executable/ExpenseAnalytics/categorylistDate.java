@@ -29,22 +29,22 @@ public class categorylistDate {
     public static Object[][] customCategoryDetails(){
 
         Object[][] data = new Object[16][2];
-        data [0][0] = "Education";             data [0][1] = "Kev kawm";
-        data [1][0] = "Entertainment";         data [1][1] = "Kev lom zem";
-        data [2][0] = "Food & Beverage";       data [2][1] = "Bebida alimenticia";
-        data [3][0] = "Health & Beauty";       data [3][1] = "Salud y Belleza";
-        data [4][0] = "Insurance";             data [4][1] = "Seguro";
-        data [5][0] = "Leisure & Sports";      data [5][1] = "Ocio y Deportes";
-        data [6][0] = "Local councils";        data [6][1] = "dewan lokal";
-        data [7][0] = "Medical & Medicines";   data [7][1] = "Kedokteran & Kedokteran";
-        data [8][0] = "Money Transfer";        data [8][1] = "Fa'aliliuga Tupe";
-        data [9][0] = "Others";                data [9][1] = "O isi";
-        data [10][0] = "Services";             data [10][1] = "Wengine";
-        data [11][0] = "Shopping";             data [11][1] = "Ununuzi";
-        data [12][0] = "Telecommunications";   data [12][1] = "Mawasiliano ya simu";
-        data [13][0] = "Transportation";       data [13][1] = "Usafiri";
-        data [14][0] = "Travel";               data [14][1] = "Viaxar";
-        data [15][0] = "Utilities";            data [15][1] = "Utilidades";
+        data [0][0] = "Education";             data [0][1] = "The Great Pyramid of Giza";
+        data [1][0] = "Entertainment";         data [1][1] = "Temple of Artemis at Ephesus";
+        data [2][0] = "Food & Beverage";       data [2][1] = "Hanging Gardens of Babylon";
+        data [3][0] = "Health & Beauty";       data [3][1] = "The Lighthouse of Alexandria";
+        data [4][0] = "Insurance";             data [4][1] = "Statue of Zeus at Olympia";
+        data [5][0] = "Leisure & Sports";      data [5][1] = "Mausoleum at Halicarnassus";
+        data [6][0] = "Local councils";        data [6][1] = "Colossus of Rhodes";
+        data [7][0] = "Medical & Medicines";   data [7][1] = "Taj Mahal, India";
+        data [8][0] = "Money Transfer";        data [8][1] = "Christ the Redeemer, Rio de Janeiro";
+        data [9][0] = "Others";                data [9][1] = "Great Wall Of China";
+        data [10][0] = "Services";             data [10][1] = "Petra, Jordan";
+        data [11][0] = "Shopping";             data [11][1] = "Machu Picchu, Peru";
+        data [12][0] = "Telecommunications";   data [12][1] = "Chichen Itza, Mexico";
+        data [13][0] = "Transportation";       data [13][1] = "Colosseum, Rome";
+        data [14][0] = "Travel";               data [14][1] = "Chichen Itza - Mexico";
+        data [15][0] = "Utilities";            data [15][1] = "Christ the Redeemer - Brazil";
 
         return data;
     }

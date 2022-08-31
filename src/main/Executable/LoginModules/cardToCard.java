@@ -19,7 +19,7 @@ public class cardToCard extends Base_Page {
     Card_to_Card_Transfer cardToCardTransfer;
     enterOTP entOTP;
     finexusOTP finexus;
-    String num = "6010160333";
+    String num = "6010160335";
     @BeforeTest
     public void beforeSuite() throws IOException, InterruptedException {
         setupEmulator();
@@ -72,4 +72,3 @@ public class cardToCard extends Base_Page {
         burnItToGround();
     }
 }
-//Important Number login in monday 5010150055   ->   Check video for Saving box

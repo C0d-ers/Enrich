@@ -4,10 +4,12 @@ import EnrichAppExpenseAnalytics.Manage_Categories;
 import EnrichAppExpenseAnalytics.Overview;
 import EnrichAppLogin.Home_Page;
 import LoginModules.Base_Page;
+import com.github.javafaker.Faker;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.Locale;
 
 public class overView extends Base_Page {
     Overview overview;
@@ -15,9 +17,9 @@ public class overView extends Base_Page {
     Manage_Categories manageCategories;
     @BeforeTest
     public void beforeTest() throws IOException, InterruptedException {
-        setupDevice();
+        setupEmulator();
         //chromeSetup();
-        //log_In();
+        log_In("5010150055");
         homePage = new Home_Page(driver);
         overview = new Overview(driver);
         manageCategories = new Manage_Categories(driver);
@@ -25,6 +27,7 @@ public class overView extends Base_Page {
     @Test(priority = 1)
     public void test() throws IOException, InterruptedException {
         //homePage.pressInbuiltButton("123456");
+        homePage.swipeVertically(0.5f,0.2f);
         homePage.clickExpenses();
         //overview.checkCategories();
         overview.clickCategoryList();
@@ -32,7 +35,9 @@ public class overView extends Base_Page {
     }
     @Test(priority = 2, dataProvider = "Custom Category Name",dataProviderClass = categorylistDate.class)
     public void subCategory(String mainCategory, String categoryName) throws IOException, InterruptedException {
-        manageCategories.createSubCategory(mainCategory,categoryName);
+        Faker faker = new Faker();
+
+        manageCategories.createSubCategory(mainCategory,faker.leagueOfLegends().summonerSpell());
         //manageCategories.editSubCategory(mainCategory);
     }
 

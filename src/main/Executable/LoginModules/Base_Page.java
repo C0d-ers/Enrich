@@ -67,6 +67,7 @@ public class Base_Page extends basePage {
         homePage = new Home_Page(driver);
         profile = new Profile(driver);
         setting = new Setting(driver);
+
         homePage.clickSettings();
         setting.clickEditProfile();
         profile.clickSignOut();
