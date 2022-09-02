@@ -17,9 +17,9 @@ public class overView extends Base_Page {
     Manage_Categories manageCategories;
     @BeforeTest
     public void beforeTest() throws IOException, InterruptedException {
-        setupEmulator();
+        setupDevice();
         //chromeSetup();
-        log_In("5010150055");
+        //log_In("5010150055");
         homePage = new Home_Page(driver);
         overview = new Overview(driver);
         manageCategories = new Manage_Categories(driver);
@@ -37,7 +37,7 @@ public class overView extends Base_Page {
     public void subCategory(String mainCategory, String categoryName) throws IOException, InterruptedException {
         Faker faker = new Faker();
 
-        manageCategories.createSubCategory(mainCategory,faker.leagueOfLegends().summonerSpell());
+        manageCategories.createSubCategory(mainCategory,faker.witcher().monster());
         //manageCategories.editSubCategory(mainCategory);
     }
 
