@@ -46,13 +46,16 @@ public class Manage_Categories extends Base_Login {
         clickButton("Confirm");
         clickButton("Ok");
     }
-    public void createSubCategory(String mainCategory,String categoryName) throws IOException, InterruptedException {
+    public void createSubCategory(String mainCategory,String categoryName,int index) throws IOException, InterruptedException {
         clickButton(mainCategory);
         //saveScreenShot(categoryName,mainCategory);
         clickButton("New " + mainCategory);
         sendText(Name,categoryName);
         clickButton("Icon");
-        clickButton("//android.widget.Button[@index = '" + Random(16) + "']");
+        if(index == 1)
+            clickButton("//android.widget.Button[@index = '" + Random(16) + "']");
+        else
+            clickButton("//android.widget.Button[@index = '" + index + "']");
         //saveScreenShot(categoryName + " 0",mainCategory);
         clickButton("Save");
         clickButton("Ok");

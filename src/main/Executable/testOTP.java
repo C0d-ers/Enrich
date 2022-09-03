@@ -1,6 +1,7 @@
 import EnrichAppOnboarding.enterOTP;
 import Onboarding.basePage;
 import chrome.finexusOTP;
+import com.github.javafaker.Faker;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
@@ -10,9 +11,9 @@ import java.time.format.DateTimeFormatter;
 public class testOTP extends basePage {
     @Test
     public void finexusOTP(){
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-        LocalDateTime now = LocalDateTime.now();
-        System.out.println(dtf.format(now));
+        Faker faker = new Faker();
+        for (int i =0;i<10;i++)
+            System.out.println();
     }
 
 }
