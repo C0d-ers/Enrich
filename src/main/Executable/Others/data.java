@@ -16,7 +16,15 @@ public class data {
         data [7][0] = "Dustin Henderson";   data [7][1] = "605010150034";
         data [8][0] = "Nancy Wheeler";      data [8][1] = "605010150020";
         data [9][0] = "Will Byers";         data [9][1] = "605010150039";
-
+        return data;
+    }
+    @DataProvider(name = "Left Contacts")
+    public static Object [] [] Contacts(){
+        Object[][] data = new Object[4][2];
+        data [3][0] = "Mike Wheeler";       data [3][1] = "605010150087";
+        data [2][0] = "Dustin Henderson";   data [2][1] = "605010150034";
+        data [1][0] = "Nancy Wheeler";      data [1][1] = "605010150020";
+        data [0][0] = "Will Byers";         data [0][1] = "605010150039";
         return data;
     }
 }
