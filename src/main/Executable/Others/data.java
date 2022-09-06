@@ -20,11 +20,12 @@ public class data {
     }
     @DataProvider(name = "Left Contacts")
     public static Object [] [] Contacts(){
-        Object[][] data = new Object[4][2];
+        Object[][] data = new Object[5][2];
         data [3][0] = "Mike Wheeler";       data [3][1] = "605010150087";
         data [2][0] = "Dustin Henderson";   data [2][1] = "605010150034";
         data [1][0] = "Nancy Wheeler";      data [1][1] = "605010150020";
-        data [0][0] = "Will Byers";         data [0][1] = "605010150039";
+        //data [0][0] = "Will Byers";         data [0][1] = "605010150039";
+        data [0][0] = "Joyce Byers";        data [0][1] = "605010150053";
         return data;
     }
 }
