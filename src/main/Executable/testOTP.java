@@ -9,11 +9,15 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class testOTP extends basePage {
-    @Test
-    public void finexusOTP(){
-        Faker faker = new Faker();
-        for (int i =0;i<10;i++)
-            System.out.println();
+
+    public static void main(String args[]){
+        System.out.println("Process No. Process Size    Block no.\n" +
+                " 1              112             3\n" +
+                " 2              518          Not Allocated\n" +
+                " 3              110             4\n" +
+                " 4              526          Not Allocated");
+
+
     }
 
 }

@@ -19,7 +19,7 @@ public class cardToCard extends Base_Page {
     Card_to_Card_Transfer cardToCardTransfer;
     enterOTP entOTP;
     finexusOTP finexus;
-    String num = "6010160354";
+    String num = "5010150046";
     @BeforeTest
     public void beforeSuite() throws IOException, InterruptedException {
         setupEmulator();

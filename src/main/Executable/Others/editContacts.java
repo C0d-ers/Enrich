@@ -31,7 +31,6 @@ public class editContacts extends basePage {
     @Test(dataProviderClass = data.class, dataProvider = "My Contacts")
     public void start(String name, String num) throws MalformedURLException, InterruptedException {
         one = new Contacts(driver);
-
         //one.deleteAll();
         one.addcontacts(name,num);
     }

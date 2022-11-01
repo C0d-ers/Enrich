@@ -154,6 +154,5 @@ public class Onboarding_NoBank extends basePage {
         validate.clickTermsAndCondition();
         validate.clickPersonalData();
         validate.continueButton();
-
     }
 }

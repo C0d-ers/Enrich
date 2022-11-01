@@ -1,10 +1,10 @@
 package Onboarding;
 
+import EnrichAppLogin.*;
 import EnrichAppOnboarding.LandingPage;
 import EnrichAppOnboarding.Login_SignUP;
 import EnrichAppOnboarding.enterOTP;
-import EnrichAppLogin.Pass_Code;
-import EnrichAppLogin.Security_Phrase;
+import Others.data;
 import chrome.smsForBOUser;
 import Onboarding.basePage;
 import io.appium.java_client.TouchAction;
@@ -25,6 +25,11 @@ public class phraseAndPasscode extends basePage {
     Security_Phrase phrase;
     Pass_Code passCode;
     smsForBOUser smsOTP;
+
+    Home_Page homePage;
+    Profile profile;
+    Setting setting;
+
     @BeforeSuite
     public void startServer() throws MalformedURLException {
         setupDevice();
@@ -35,16 +40,15 @@ public class phraseAndPasscode extends basePage {
         OTP = new enterOTP(driver);
         passCode = new Pass_Code(driver);
         smsOTP = new smsForBOUser(chromeDriver);
+        homePage = new Home_Page(driver);
+        profile = new Profile(driver);
+        setting = new Setting(driver);
     }
-    @Test
-    public void startPhraseAndPassword() throws IOException, InterruptedException {
-        TouchAction<?> action = new TouchAction(driver);
-        FileInputStream input = new FileInputStream("src/main/Resource/Resource.properties");
-        Properties properties = new Properties();
-        properties.load(input);
+    @Test(dataProviderClass = data.class, dataProvider = "CreateSecurityPhrase")
+    public void startPhraseAndPassword(String numPost) throws IOException, InterruptedException {
 
-        String phoneNumber = "5010150" + properties.getProperty("numPost");
-        String Phrase = "50" + properties.getProperty("numPost") + dateForPhrase();
+        String phoneNumber = "6010160" + numPost;
+        String Phrase = "60" + numPost + dateForPhrase();
 
         landingPage.logIn();
         logIn.enterPhoneNumberLgn(phoneNumber);
@@ -65,6 +69,15 @@ public class phraseAndPasscode extends basePage {
         System.out.println(phrase);
         passCode.enterPasscode("123456");
         passCode.enterPasscode("123456");
+
+        homePage = new Home_Page(driver);
+        profile = new Profile(driver);
+        setting = new Setting(driver);
+
+        homePage.clickSettings();
+        setting.clickEditProfile();
+        profile.clickSignOut();
+        profile.clickYes();
     }
     @AfterTest
     public void closeServer(){
